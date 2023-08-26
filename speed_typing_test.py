@@ -49,7 +49,7 @@ class App(ctk.CTk):
             text="Welcome to the typing speed test application!\n"
             "This is my first golden project for the CodeClause internship.\n"
             "The test lasts for a total of 60 seconds.\n"
-            'Type the words as shown on the screen and press "Enter" to proceed to the next word.\n'
+            'Type the words as shown on the screen and press the spacebar to proceed to the next word.\n'
             "The metrics will be shown in real-time as well as at the end of the test.\n"
             "You can exit the test at any time.",
             font=ctk.CTkFont(family="Helvetica", size=14, slant="italic"),
@@ -104,8 +104,8 @@ class App(ctk.CTk):
         )
         self.entry_word.pack(pady=10)
 
-        # Perform post-input tasks when the user presses the "Enter" key
-        self.entry_word.bind("<Return>", self.check_word)
+        # Perform post-input tasks when the user presses the "Space" key
+        self.entry_word.bind("<space>", self.check_word)
         self.entry_word.focus()  # Focus the cursor on the input box
 
     # noinspection PyUnusedLocal
